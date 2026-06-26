@@ -47,7 +47,7 @@ Sucesso! 3 arquivos renomeados.
 
 ---
 
-## 🚀 Instalação
+##  Instalação
 
 Como este projeto utiliza **apenas a biblioteca padrão do Python** (`pathlib`, `argparse`, `json`, etc.), **não há dependências externas** (o arquivo `requirements.txt` é propositalmente vazio!). Isso torna a ferramenta super leve, rápida e segura.
 
@@ -57,10 +57,10 @@ Como este projeto utiliza **apenas a biblioteca padrão do Python** (`pathlib`, 
 
 ---
 
-### 🌍 Opção 1: Instalação Global (Para uso diário)
+###  Opção 1: Instalação Global (Para uso diário)
 *Recomendado se você quer usar o `rename` como um comando normal em qualquer pasta do seu computador.*
 
-#### 🐧 Linux
+####  Linux
 Sistemas Linux modernos bloqueiam instalações globais via `pip` para proteger o sistema. A ferramenta padrão recomendada para isso é o `pipx`:
 
 ```bash
@@ -76,7 +76,7 @@ pipx install .
 ```
 *(Feche e abra seu terminal após a instalação)*
 
-#### 🪟 Windows
+####  Windows
 No Windows você pode instalar globalmente direto pelo `pip`:
 
 ```powershell
@@ -84,11 +84,11 @@ git clone https://github.com/seu-usuario/rename-cli.git
 cd rename-cli
 pip install .
 ```
-> ⚠️ **Atenção no Windows:** O sistema possui um comando nativo chamado `rename` (ou `ren`). Caso ocorra algum conflito, prefira a instalação da Opção 2 abaixo.
+>  **Atenção no Windows:** O sistema possui um comando nativo chamado `rename` (ou `ren`). Caso ocorra algum conflito, prefira a instalação da Opção 2 abaixo.
 
 ---
 
-### 💻 Opção 2: Instalação Local (Para desenvolvimento)
+###  Opção 2: Instalação Local (Para desenvolvimento)
 *Recomendado se você quer modificar o código, contribuir com o projeto ou não quer instalar nada globalmente.*
 
 ```bash
@@ -107,7 +107,7 @@ pip install -e .
 
 ---
 
-### ✅ Confirme a instalação
+###  Confirme a instalação
 Após seguir qualquer uma das opções, verifique se o sistema reconheceu o comando:
 ```bash
 rename --help
