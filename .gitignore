@@ -15,8 +15,10 @@ __pycache__/
 build/
 dist/
 
-# Documentação interna e arquivos sensíveis
+# Documentação interna, arquivos sensíveis e Orion
 docs/
+memory/
+pasta_teste/
 
 # Histórico do projeto (Rename CLI)
 .rename_history.json
