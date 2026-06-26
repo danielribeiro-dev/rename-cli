@@ -15,6 +15,9 @@ __pycache__/
 build/
 dist/
 
+# Documentação interna e arquivos sensíveis
+docs/
+
 # Histórico do projeto (Rename CLI)
 .rename_history.json
 logs/
