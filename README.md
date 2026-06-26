@@ -47,108 +47,71 @@ Sucesso! 3 arquivos renomeados.
 
 ---
 
-##  Instalação
+## 🚀 Instalação
+
+Como este projeto utiliza **apenas a biblioteca padrão do Python** (`pathlib`, `argparse`, `json`, etc.), **não há dependências externas** (o arquivo `requirements.txt` é propositalmente vazio!). Isso torna a ferramenta super leve, rápida e segura.
 
 ### Pré-requisitos
-
 - **Python 3.10** ou superior
-- **pip** (gerenciador de pacotes do Python)
-- **Git** (para clonar o repositório)
+- **Git** (para baixar o repositório)
 
 ---
 
-###  Linux
+### 🌍 Opção 1: Instalação Global (Para uso diário)
+*Recomendado se você quer usar o `rename` como um comando normal em qualquer pasta do seu computador.*
 
-#### 1. Verifique se o Python está instalado
-
-```bash
-python3 --version
-```
-
-Caso não tenha o Python, instale via apt (Ubuntu/Debian):
+#### 🐧 Linux
+Sistemas Linux modernos bloqueiam instalações globais via `pip` para proteger o sistema. A ferramenta padrão recomendada para isso é o `pipx`:
 
 ```bash
+# 1. Instale o pipx (Ubuntu/Debian)
 sudo apt update
-sudo apt install python3 python3-pip -y
-```
+sudo apt install pipx -y
+pipx ensurepath
 
-#### 2. Clone o repositório
-
-```bash
+# 2. Clone e instale
 git clone https://github.com/seu-usuario/rename-cli.git
 cd rename-cli
+pipx install .
 ```
+*(Feche e abra seu terminal após a instalação)*
 
-#### 3. (Opcional) Crie um ambiente virtual
+#### 🪟 Windows
+No Windows você pode instalar globalmente direto pelo `pip`:
 
-Recomendado para isolar as dependências do projeto:
+```powershell
+git clone https://github.com/seu-usuario/rename-cli.git
+cd rename-cli
+pip install .
+```
+> ⚠️ **Atenção no Windows:** O sistema possui um comando nativo chamado `rename` (ou `ren`). Caso ocorra algum conflito, prefira a instalação da Opção 2 abaixo.
+
+---
+
+### 💻 Opção 2: Instalação Local (Para desenvolvimento)
+*Recomendado se você quer modificar o código, contribuir com o projeto ou não quer instalar nada globalmente.*
 
 ```bash
+# 1. Clone o repositório
+git clone https://github.com/seu-usuario/rename-cli.git
+cd rename-cli
+
+# 2. Crie e ative o ambiente virtual
 python3 -m venv .venv
-source .venv/bin/activate
-```
+source .venv/bin/activate  # No Windows use: .venv\Scripts\activate
 
-#### 4. Instale o projeto
-
-```bash
+# 3. Instale em modo editável (qualquer mudança no código atualizará o comando)
 pip install -e .
 ```
-
-#### 5. Confirme a instalação
-
-```bash
-rename --help
-```
-
-Se o comando for reconhecido, a instalação foi bem-sucedida! 
+*(Você precisará rodar o comando de ativação do `.venv` sempre que abrir um novo terminal para usar o `rename` neste modo).*
 
 ---
 
-###  Windows
-
-#### 1. Instale o Python
-
-Baixe o instalador em [python.org/downloads](https://www.python.org/downloads/).
-
-> ⚠️ **Importante:** Durante a instalação, marque a opção **"Add Python to PATH"** antes de clicar em _Install Now_.
-
-Após instalar, abra o **Prompt de Comando (cmd)** ou o **PowerShell** e verifique:
-
-```powershell
-python --version
-```
-
-#### 2. Clone o repositório
-
-```powershell
-git clone https://github.com/seu-usuario/rename-cli.git
-cd rename-cli
-```
-
-> Caso não tenha o Git, baixe em [git-scm.com](https://git-scm.com/download/win).
-
-#### 3. (Opcional) Crie um ambiente virtual
-
-```powershell
-python -m venv .venv
-.venv\Scripts\activate
-```
-
-#### 4. Instale o projeto
-
-```powershell
-pip install -e .
-```
-
-#### 5. Confirme a instalação
-
-```powershell
+### ✅ Confirme a instalação
+Após seguir qualquer uma das opções, verifique se o sistema reconheceu o comando:
+```bash
 rename --help
 ```
-
-> ⚠️ **Atenção no Windows:** O Windows possui um comando nativo chamado `rename` (ou `ren`). Caso haja conflito, prefira executar via `python -m src.main` ou utilize o ambiente virtual ativado.
-
----
 
 ##  Como usar
 
