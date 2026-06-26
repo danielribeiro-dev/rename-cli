@@ -1,0 +1,11 @@
+{
+    "system_name": "NOVO_ORION",
+    "user_name": "User",
+    "language": "pt-BR",
+    "preferences": {},
+    "current_user": {
+        "username": "admin",
+        "role": "admin",
+        "dev_mode": false
+    }
+}
